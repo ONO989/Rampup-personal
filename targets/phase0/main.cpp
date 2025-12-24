@@ -42,5 +42,8 @@ int main() {
 
         // TODO: (Step 8) add an if statement that checks if the area to perimeter ratio is greater than or equal to 0.5
         //  You'll have to use fixed point numbers for this!
+        if (((shapeArr[i]->getPerimeter() * 100) / shapeArr[i]->getArea()) >= 50 ) {
+            printf("Shape %u has ratio greater than 0.5\n\r", i );
+        }
     }
-}
+};
