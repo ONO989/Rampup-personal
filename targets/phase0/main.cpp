@@ -8,10 +8,12 @@
 #include "../../include/dev/Rectangle.hpp"
 #include "../../include/dev/Shape.hpp"
 #include "../../include/dev/Square.hpp"
+#include "../../include/dev/Triangle.hpp"
+
 // TODO: (Step 7) Make sure to import the hpp of your new shape here.
 
 // TODO: (Step 7) When you're adding more shapes to the array, make sure the array is large enough to hold all of them!
-#define SHAPE_ARRAY_LENGTH 4
+#define SHAPE_ARRAY_LENGTH 5
 
 int main() {
     // constructing two rectangles
@@ -19,6 +21,7 @@ int main() {
     // TODO: (Step 6) construct 2 square objects here, then add them to the shapeArray
     rampup::Square A(5);
     rampup::Square B(10);
+    rampup::Triangle T(8,8,8);
 
     // TODO: (Step 7) when you make your other type of Shape, construct it here
 
@@ -28,6 +31,7 @@ int main() {
         &rect2,
         &A,
         &B,
+        &T,
     };
     for (int i = 0; i < SHAPE_ARRAY_LENGTH; i++) {
         printf("Shape %u has area %u and perimeter %u\n\r", i, shapeArr[i]->getArea(), shapeArr[i]->getPerimeter());

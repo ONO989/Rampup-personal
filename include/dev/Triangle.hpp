@@ -16,35 +16,31 @@ namespace rampup {
 class Triangle : public Shape {
 public:
     /**
-     * Constructs a new rectangle object with the given width and height
+     * Constructs a new triangle object with the given width and height
      *
      * @param[in] length
-     * @param[in] width
+     * @param[in] height
+     * @param[in] Hypotnuse
      */
-    Triangle(uint32_t length, uint32_t width);
+    Triangle(uint32_t length, uint32_t height, uint32_t Hypotnuse);
 
-    /**
-     * Gets the length of the rectangle.
-     *
-     * @return length of the rectangle.
-     */
     virtual uint32_t getLength();
 
-    /**
-     * Gets the width of the rectangle.
-     *
-     * @return width of the rectangle.
-     */
     virtual uint32_t getWidth();
+
+    virtual uint32_t getHypotnuse();
+
 
     // Overridden methods from Shape
     uint32_t getArea() override;
+
     uint32_t getPerimeter() override;
 
 private:
-    // TODO: add 2 variables here that store all the information that is needed about a Rectangle
+    // one variable for triangle
     uint32_t length;
-    uint32_t width;
+    uint32_t height;
+    uint32_t Hypotnuse;
 
 };
 
